@@ -19,15 +19,17 @@
 			<input type = "submit" name = "enter" value="Calculate">    
 			<br><br>
 		<?php  
-			if(isset($_POST['enter']))  
-		    		{   
+			if(isset($_POST['enter'])) {  
+		    		   
 				$radius = $_POST['Radius'];   
 				$height = $_POST['Height']; 
 				$unit = $_POST['Unit'];
 				$surfaceArea = pi() * $radius * ($radius + sqrt($height ** 2 + $radius ** 2));
 				$surfaceArea = round($surfaceArea, 2);
-				$volume = 1/3 + (pi() ($radius ** 2) * $height);
+				$volume = 1/3 + (pi() * ($radius ** 2) * $height);
 				$volume = round($volume, 2);
+				
+			}
 		?>
 	</body>
 </html>
