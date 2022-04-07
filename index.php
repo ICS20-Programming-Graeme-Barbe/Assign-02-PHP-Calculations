@@ -11,13 +11,16 @@
 		<!-- Css style sheet -->
 		<link rel="stylesheet"dfghj href="./css/style.css" />
 		<title>Surface Area and Volume of a Cone</title>
-	</headlm
+	</head>
 	<body>
 		<!-- Title, Info and image -->
 		<center><?php 
 			echo '<center><h1>Surface Area and Volume of a Cone</h1></center>';
-			echo '<img src="./images/cone.gif" width="30%"/>';
-			echo "<p><center>Fill out the text fields below and find out the surface area and volume of your cone, don't forget to put units!</center></p>"; 
+			echo '<img src="./images/Diagram.jpg" width="13%"/>';
+			echo '<img src="./images/surfaceArea.png" width="20%"/>';
+			echo '<img src="./images/Volume.png" width="13.38%"/>';
+			echo '<center><p>Formulas for the surface area and volume of a cone.</center></p>';
+			echo "<p><center>Fill out the text fields below and determine the surface area and volume of your cone. Don't forget to put units!</center></p>"; 
 		?>
 		<!-- Textfields -->
 		<form method = "post">   
@@ -38,10 +41,10 @@
 				$unit = $_POST['Unit'];
 				$surfaceArea = pi() * $radius * ($radius + sqrt($height ** 2 + $radius ** 2));
 				$surfaceArea = round($surfaceArea, 2);
-				$volume = 1/3 * (pi() * ($radius ** 2) * $height);
+				$volume = (pi() * ($radius ** 2) * $height / 3);
 				$volume = round($volume, 2);
-				echo "<br><br>The surface area of the cone is " . $surfaceArea . $unit . '²';
-				echo "<br><br>The volume of the cone is " . $volume . $unit . "³";
+				echo "<br><br>The surface area of the cone is " . $surfaceArea . " " . $unit . '²';
+				echo "<br><br>The volume of the cone is " . $volume . " " . $unit . "³";
 			}
 		?>
 	</body>
